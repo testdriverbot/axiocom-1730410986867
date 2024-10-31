@@ -1,0 +1,52 @@
+version: 4.0.78
+steps:
+  - prompt: Click "Request Demo".
+    commands:
+      - command: hover-text
+        text: Request Demo
+        description: button to request a demo
+        action: click
+  - prompt: Assert that a form shows.
+    commands:
+      - command: assert
+        expect: First Name field is visible
+  - prompt: Complete the form and any additional steps.
+    commands:
+      - command: assert
+        expect: a form is visible on the page
+  - prompt: Complete the form and any additional steps.
+    commands:
+      - command: hover-text
+        text: First Name
+        description: field for first name
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name
+        description: field for last name
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email
+        description: field for email
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Company
+        description: field for company
+        action: click
+      - command: type
+        text: Example Corp
+      - command: hover-text
+        text: Get Started
+        description: button to submit the form
+        action: click
+  - prompt: >-
+      Assert that a success message is displayed.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: Success! message is visible
