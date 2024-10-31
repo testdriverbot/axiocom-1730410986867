@@ -1,0 +1,24 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "PARTNERS" in the header.
+    commands:
+      - command: hover-text
+        text: PARTNERS
+        description: link in the header
+        action: click
+  - prompt: Assert that the partners page or section shows.
+    commands:
+      - command: assert
+        expect: AXIO PARTNERSHIP PROGRAM is visible
+  - prompt: Explore partner opportunities or information.
+    commands:
+      - command: hover-text
+        text: Contact Our Partner Team
+        description: button to explore partner opportunities
+        action: click
+  - prompt: >-
+      Assert that no errors occur during navigation.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: no error messages are visible
