@@ -1,0 +1,66 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Book Demo".
+    commands:
+      - command: hover-text
+        text: Book Demo
+        description: button in the header
+        action: click
+  - prompt: Assert that a scheduling page or form is displayed.
+    commands:
+      - command: assert
+        expect: a form with fields like First Name, Last Name, and Email is displayed
+  - prompt: Book a demo with test data.
+    commands:
+      - command: hover-text
+        text: First Name
+        description: first name field
+        action: click
+      - command: type
+        text: Test
+      - command: hover-text
+        text: Last Name
+        description: last name field
+        action: click
+      - command: type
+        text: User
+      - command: hover-text
+        text: Email
+        description: email field
+        action: click
+      - command: type
+        text: testuser@example.com
+      - command: hover-text
+        text: Company
+        description: company field
+        action: click
+      - command: type
+        text: TestCorp
+      - command: hover-text
+        text: Get Started
+        description: get started button
+        action: click
+  - prompt: Book a demo with test data.
+    commands:
+      - command: hover-text
+        text: Last Name
+        description: last name field
+        action: click
+      - command: type
+        text: User
+      - command: hover-text
+        text: Get Started
+        description: get started button
+        action: click
+  - prompt: Book a demo with test data.
+    commands:
+      - command: hover-text
+        text: Last Name
+        description: last name field
+        action: click
+      - command: type
+        text: User
+      - command: hover-text
+        text: Get Started
+        description: get started button
+        action: click
