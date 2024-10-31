@@ -1,0 +1,22 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "AXIO360 PLATFORM" in the header.
+    commands:
+      - command: hover-text
+        text: AXIO360 PLATFORM
+        description: link in the header
+        action: click
+  - prompt: Assert that the product features page shows.
+    commands:
+      - command: assert
+        expect: AXIO360 PLATFORM features are displayed
+  - prompt: Assert that the product features page shows.
+    commands:
+      - command: scroll-until-text
+        text: Product Features
+        direction: down
+  - prompt: Assert that the product features page shows.
+    commands:
+      - command: scroll-until-text
+        text: Product Features
+        direction: down
