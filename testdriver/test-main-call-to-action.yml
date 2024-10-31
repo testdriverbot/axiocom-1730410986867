@@ -1,0 +1,14 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Try it Free".
+    commands:
+      - command: hover-text
+        text: Try it Free
+        description: button to start a free trial
+        action: click
+  - prompt: Click on "Try it Free".
+    commands:
+      - command: hover-text
+        text: Try it Free
+        description: button to start a free trial
+        action: double-click
