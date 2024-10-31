@@ -1,0 +1,24 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Resources" in the header.
+    commands:
+      - command: hover-text
+        text: Resources
+        description: link in the header
+        action: click
+  - prompt: Assert that a resources page or dropdown shows.
+    commands:
+      - command: assert
+        expect: the resources dropdown is visible
+  - prompt: Access a resource like a blog or article.
+    commands:
+      - command: hover-text
+        text: BLOG
+        description: link under Resources section
+        action: click
+  - prompt: >-
+      Assert that the resource displays correctly.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the blog page is visible with recent blogs listed
